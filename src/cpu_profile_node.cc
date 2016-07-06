@@ -56,6 +56,7 @@ namespace nodex {
     profile_node->Set(Nan::New<String>("lineNumber").ToLocalChecked(),    Nan::New<Integer>(node->GetLineNumber()));
     profile_node->Set(Nan::New<String>("callUID").ToLocalChecked(),       Nan::New<Number>(node->GetCallUid()));
 #if (NODE_MODULE_VERSION > 0x000B)
+    profile_node->Set(Nan::New<String>("columnNumber").ToLocalChecked(),    Nan::New<Integer>(node->GetColumnNumber()));
     profile_node->Set(Nan::New<String>("bailoutReason").ToLocalChecked(), Nan::New<String>(node->GetBailoutReason()).ToLocalChecked());
     profile_node->Set(Nan::New<String>("id").ToLocalChecked(),            Nan::New<Integer>(node->GetNodeId()));
     profile_node->Set(Nan::New<String>("scriptId").ToLocalChecked(),      Nan::New<Integer>(node->GetScriptId()));
